@@ -86,7 +86,8 @@ function handleMessage(sender_psid, received_message) {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": `welcome to AdventureWorks.You sent the message: "${received_message.text}".Please send the picture url`
+      "text": `welcome to AdventureWorks Bicycle Company.You have sent the message: "${received_message.text}".
+               Please upload the picture for which you want to know the price`
     }
   } else if (received_message.attachments) {
     // Get the URL of the message attachment
