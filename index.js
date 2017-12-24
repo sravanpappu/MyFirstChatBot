@@ -86,8 +86,7 @@ function handleMessage(sender_psid, received_message) {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": `welcome to AdventureWorks Bicycle Company.You have sent the message: "${received_message.text}".
-               Please upload the picture for which you want to know the price`
+      "text": `Welcome to AdventureWorks Bicycle Company.You have sent the message: "${received_message.text}". Please upload the picture for which you want to know the price.`
     }
   } else if (received_message.attachments) {
     // Get the URL of the message attachment
@@ -131,7 +130,7 @@ function handlePostback(sender_psid, received_postback) {
 
   // Set the response based on the postback payload
   if (payload === 'yes') {
-    response = { "text": "Thanks!" }
+    response = { "text": "Thanks! We will update you with the price soon." }
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
   }
